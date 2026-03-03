@@ -33,6 +33,8 @@ def show():
 def save():
     with open("tasks.json", "w") as file:
         json.dump(tasks, file, indent=4)
+def done(index):
+    tasks[int(index)-1]["done"] = True
 
 while True:  
     user = input("> ")
